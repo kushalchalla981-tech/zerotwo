@@ -42,8 +42,8 @@ export class AnimationEngine {
     }
 
     calculateEyeTracking() {
-        const eyeCenterX = 1024;
-        const eyeCenterY = 1400;
+        const eyeCenterX = 915;
+        const eyeCenterY = 860;
         
         const maxOffsetX = 20;
         const maxOffsetY = 15;
@@ -137,12 +137,12 @@ export class AnimationEngine {
         this.stateManager.setEyePosition(this.currentEyePosition.x, this.currentEyePosition.y);
 
         this.renderingEngine.updateLayer('pupil_left', { 
-            x: 790 + this.currentEyePosition.x,
-            y: 1230 + this.currentEyePosition.y
+            x: 735 + this.currentEyePosition.x,
+            y: 870 + this.currentEyePosition.y
         });
         this.renderingEngine.updateLayer('pupil_right', { 
-            x: 1120 + this.currentEyePosition.x,
-            y: 1230 + this.currentEyePosition.y
+            x: 1165 + this.currentEyePosition.x,
+            y: 870 + this.currentEyePosition.y
         });
 
         const expr = this.stateManager.getExpression();
@@ -167,18 +167,18 @@ export class AnimationEngine {
             const swayOffset = Math.sin(time * 0.001) * 5;
 
             this.renderingEngine.updateLayer('body_base', {
-                y: 1600 + verticalOffset,
+                y: 1500 + verticalOffset,
                 x: 524 + swayOffset
             });
             
             this.renderingEngine.updateLayer('face_base', {
-                y: 600 + verticalOffset,
+                y: 300 + verticalOffset,
                 x: 574 + swayOffset
             });
         } else {
             if (this.stateManager.state.idleState) {
-                this.renderingEngine.updateLayer('body_base', { y: 1600, x: 524 });
-                this.renderingEngine.updateLayer('face_base', { y: 600, x: 574 });
+                this.renderingEngine.updateLayer('body_base', { y: 1500, x: 524 });
+                this.renderingEngine.updateLayer('face_base', { y: 300, x: 574 });
             }
             this.stateManager.setIdleState(false);
         }
