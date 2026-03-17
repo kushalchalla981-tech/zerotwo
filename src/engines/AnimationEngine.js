@@ -42,8 +42,8 @@ export class AnimationEngine {
     }
 
     calculateEyeTracking() {
-        const eyeCenterX = 915;
-        const eyeCenterY = 860;
+        const eyeCenterX = 960;
+        const eyeCenterY = 780;
         
         const maxOffsetX = 20;
         const maxOffsetY = 15;
@@ -137,12 +137,12 @@ export class AnimationEngine {
         this.stateManager.setEyePosition(this.currentEyePosition.x, this.currentEyePosition.y);
 
         this.renderingEngine.updateLayer('pupil_left', { 
-            x: 735 + this.currentEyePosition.x,
-            y: 870 + this.currentEyePosition.y
+            x: 775 + this.currentEyePosition.x,
+            y: 795 + this.currentEyePosition.y
         });
         this.renderingEngine.updateLayer('pupil_right', { 
-            x: 1165 + this.currentEyePosition.x,
-            y: 870 + this.currentEyePosition.y
+            x: 1145 + this.currentEyePosition.x,
+            y: 795 + this.currentEyePosition.y
         });
 
         const expr = this.stateManager.getExpression();
@@ -167,18 +167,18 @@ export class AnimationEngine {
             const swayOffset = Math.sin(time * 0.001) * 5;
 
             this.renderingEngine.updateLayer('body_base', {
-                y: 1500 + verticalOffset,
-                x: 524 + swayOffset
+                y: 1450 + verticalOffset,
+                x: 624 + swayOffset
             });
             
             this.renderingEngine.updateLayer('face_base', {
-                y: 300 + verticalOffset,
-                x: 574 + swayOffset
+                y: 250 + verticalOffset,
+                x: 624 + swayOffset
             });
         } else {
             if (this.stateManager.state.idleState) {
-                this.renderingEngine.updateLayer('body_base', { y: 1500, x: 524 });
-                this.renderingEngine.updateLayer('face_base', { y: 300, x: 574 });
+                this.renderingEngine.updateLayer('body_base', { y: 1450, x: 624 });
+                this.renderingEngine.updateLayer('face_base', { y: 250, x: 624 });
             }
             this.stateManager.setIdleState(false);
         }
