@@ -1,0 +1,26 @@
+export const layerConfig = [
+    { key: 'hair_back', src: 'assets/hair/hair_back_base_01.png', x: 324, y: 0, visible: true, zIndex: 1 },
+    { key: 'body_base', src: 'assets/body/body_torso_base_01.png', x: 524, y: 1600, visible: true, zIndex: 2, offsetX: 0, offsetY: 0 },
+    { key: 'legs_left', src: 'assets/legs/leg_left_base_01.png', x: 824, y: 2400, visible: true, zIndex: 3 },
+    { key: 'legs_right', src: 'assets/legs/leg_right_base_01.png', x: 1224, y: 2400, visible: true, zIndex: 3 },
+    { key: 'arms_back', src: 'assets/arms/arm_left_base_01.png', x: 200, y: 1400, visible: true, zIndex: 4 },
+    { key: 'torso_details', src: 'assets/body/body_overlay_details_01.png', x: 524, y: 1600, visible: true, zIndex: 5 },
+    { key: 'neck', src: 'assets/body/body_neck_01.png', x: 924, y: 1300, visible: true, zIndex: 6 },
+    { key: 'face_base', src: 'assets/head/head_base_01.png', x: 574, y: 600, visible: true, zIndex: 7 },
+    { key: 'eye_left', src: 'assets/eyes/eye_left_base_01.png', x: 750, y: 1200, visible: true, zIndex: 8 },
+    { key: 'eye_right', src: 'assets/eyes/eye_right_base_01.png', x: 1080, y: 1200, visible: true, zIndex: 8 },
+    { key: 'pupil_left', src: 'assets/pupils/pupil_left_01.png', x: 790, y: 1230, visible: true, zIndex: 9, offsetX: 0, offsetY: 0 },
+    { key: 'pupil_right', src: 'assets/pupils/pupil_right_01.png', x: 1120, y: 1230, visible: true, zIndex: 9, offsetX: 0, offsetY: 0 },
+    { key: 'eyelid_upper_left', src: 'assets/eyelids/eyelid_upper_left_open_01.png', x: 750, y: 1180, visible: true, zIndex: 10 },
+    { key: 'eyelid_upper_right', src: 'assets/eyelids/eyelid_upper_right_open_01.png', x: 1080, y: 1180, visible: true, zIndex: 10 },
+    { key: 'eyelid_lower_left', src: 'assets/eyelids/eyelid_lower_left_open_01.png', x: 750, y: 1260, visible: false, zIndex: 10 },
+    { key: 'eyelid_lower_right', src: 'assets/eyelids/eyelid_lower_right_open_01.png', x: 1080, y: 1260, visible: false, zIndex: 10 },
+    { key: 'eyebrow_left', src: 'assets/eyebrows/eyebrow_left_neutral_01.png', x: 760, y: 1050, visible: true, zIndex: 11 },
+    { key: 'eyebrow_right', src: 'assets/eyebrows/eyebrow_right_neutral_01.png', x: 1090, y: 1050, visible: true, zIndex: 11 },
+    { key: 'mouth', src: 'assets/mouth/mouth_neutral_01.png', x: 934, y: 1500, visible: true, zIndex: 12 },
+    { key: 'hair_front', src: 'assets/hair/hair_front_base_01.png', x: 424, y: 400, visible: true, zIndex: 13 },
+    { key: 'horn_left', src: 'assets/horns/horn_left_01.png', x: 700, y: 550, visible: true, zIndex: 14 },
+    { key: 'horn_right', src: 'assets/horns/horn_right_01.png', x: 1230, y: 550, visible: true, zIndex: 14 },
+];
+
+layerConfig.sort((a, b) => a.zIndex - b.zIndex);
